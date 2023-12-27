@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #000000; /* Set background color to black */
+}
+
+.outer-circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff0000 0% 25%,
+    #00ff00 25% 50%,
+    #0000ff 50% 75%,
+    #ffff00 75% 100%
+  );
+}
+
+.inner-circle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #ffffff; /* White */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg); /* Adjusted to 720deg for 2 seconds rotation */
+  }
+}
